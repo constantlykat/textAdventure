@@ -299,7 +299,7 @@ public class Game{
             System.out.println("You cannot define that word");
         }
         if (currentRoom.checkEmpty() ) {
-        	player.setItem("ainenglish" );
+        	//player.setItem("ainenglish" );
         }
         
         }
@@ -310,10 +310,14 @@ public class Game{
         if (!command.hasSecondWord()){
             System.out.println ("paint what?");
             return;
+           //Item painting = player.getItem(palate);
+           //if (painting == null) {
+          // }
+           }
         } 
 
         ;        
-    }
+  
 
     
 

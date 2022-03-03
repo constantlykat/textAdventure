@@ -58,6 +58,10 @@ public class Room{
         }
         return returnString;
     }
+    
+    public boolean checkEmpty() {
+    	return inventory.isEmpty();
+    }
 
     public String getExitString (){
         String returnString = "Exits: ";
