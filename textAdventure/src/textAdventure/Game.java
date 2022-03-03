@@ -274,13 +274,13 @@ public class Game{
 
     public void define(Command command){
 
-        if (!command.hasSecondWord()){
-            System.out.println ("define what?");
+      if (!command.hasSecondWord()){
+          System.out.println ("define what?");
         }
 
         String word = command.getSecondWord();
 
-        if (word.equals("logos")){
+       if (word.equals("logos")){
             System.out.println("Logos:appeals to the audience's reason, building up logical arguments.");
             Item logos= currentRoom.removeItem(word);
         }
@@ -290,7 +290,7 @@ public class Game{
             Item ethos = currentRoom.removeItem(word);
         }
         
-        else if (word.equals("pathos")){
+       else if (word.equals("pathos")){
             System.out.println("Pathos:appeals to the emotions.");
             Item pathos = currentRoom.removeItem(word);
         }
@@ -308,7 +308,7 @@ public class Game{
     
         public void paint(Command command){
         if (!command.hasSecondWord()){
-            System.out.println ("paint what?");
+           // System.out.println ("paint what?");
             return;
            //Item painting = player.getItem(palate);
            //if (painting == null) {
