@@ -6,7 +6,23 @@ public class Game{
     private Room currentRoom;
     private Player player;
     private CLS cls_var;
-
+    Item ainenglish;
+    Item ainscience;
+    Item ainmath;
+    Item ainart;
+    Item mathtest;
+    Item pathos;
+    Item ethos;
+    Item logos;
+    Item palete;
+    Item paintbrush;
+    Item canvas;
+    Item bluebeaker;
+    Item purplebeaker;
+    Item greenbeaker;
+    Item pinkbeaker;
+    Item pencil;
+    
     public Game(){
         parser = new Parser();
         player = new Player();
@@ -33,22 +49,22 @@ public class Game{
         Room scienceclass = new Room ("science class","You have entered science class", "You have entered Mr. Atom's science class. There are 3 beakers: 1 with a pink liquid, 1 with a green liquid, and 1 with a blue liquid.");
         Room artclass = new Room ("art class","You have entered art class", "You have entered Mrs. Color's art class. You see a paintbrush, canvas, and palete in front of you. ");
 
-        Item mathtest = new Item("math test", "long descriptions");
-        Item pencil = new Item("pencil", "long descriptions");
-        Item pinkbeaker = new Item("pink beaker", "long descriptions");
-        Item greenbeaker = new Item("green beaker", "long descriptions");
-        Item purplebeaker = new Item("purple beaker", "long descriptions");
-        Item bluebeaker = new Item("blue beaker", "long descriptions");
-        Item canvas = new Item("canvas", "long descriptions");
-        Item paintbrush = new Item("paintBrush", "long descriptions");
-        Item palete = new Item("palete", "long descriptions");
-        Item logos = new Item("logos", "long descriptions");
-        Item ethos = new Item("ethos", "long descriptions");
-        Item pathos = new Item("pathos", "long descriptions");
-        Item ainmath = new Item("ainmath", "long descriptions");
-        Item ainenglish = new Item("ainenglish", "long descriptions");
-        Item ainscience = new Item("ainscience", "long descriptions");
-        Item ainart = new Item("ainart", "long descriptions");
+        mathtest = new Item("math test", "long descriptions");
+        pencil = new Item("pencil", "long descriptions");
+        pinkbeaker = new Item("pink beaker", "long descriptions");
+        greenbeaker = new Item("green beaker", "long descriptions");
+        purplebeaker = new Item("purple beaker", "long descriptions");
+        bluebeaker = new Item("blue beaker", "long descriptions");
+        canvas = new Item("canvas", "long descriptions");
+        paintbrush = new Item("paintBrush", "long descriptions");
+        palete = new Item("palete", "long descriptions");
+        logos = new Item("logos", "long descriptions");
+        ethos = new Item("ethos", "long descriptions");
+        pathos = new Item("pathos", "long descriptions");
+        ainmath = new Item("ainmath", "long descriptions");
+        ainenglish = new Item("ainenglish", "long descriptions");
+        ainscience = new Item("ainscience", "long descriptions");
+        ainart = new Item("ainart", "long descriptions");
 
         hallway.setExit("math class", mathclass);
         hallway.setExit("english class", englishclass);
@@ -265,10 +281,11 @@ public class Game{
         else{
             
         }
-        //declare and initialize purple beaker 
+
     }
 
-    public void take(Command command){
+    public void take(Command co  
+    		mmand){
 
     }
 
@@ -299,8 +316,11 @@ public class Game{
             System.out.println("You cannot define that word");
         }
         if (currentRoom.checkEmpty() ) {
-        	//player.setItem("ainenglish" );
+        	player.setItem("ainenglish", ainenglish );
+        	System.out.println("Yay you have passed English class! You may now go to your next class.");
         }
+        
+        
         
         }
         
@@ -308,17 +328,14 @@ public class Game{
     
         public void paint(Command command){
         if (!command.hasSecondWord()){
-           // System.out.println ("paint what?");
+          System.out.println ("paint what?");
             return;
-           //Item painting = player.getItem(palate);
-           //if (painting == null) {
-          // }
+           Item painting = player.getItem();
+           if (painting == null) {
+        	   System.out.println("you need some more things before you can paint");
+           }
            }
         } 
-
-        ;        
-  
-
     
 
     public boolean endGame(){
