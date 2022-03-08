@@ -2,6 +2,7 @@ package textAdventure;
 
 
 public class Game{
+	boolean test;
     private Parser parser;
     private Room currentRoom;
     private Player player;
